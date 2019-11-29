@@ -26,6 +26,7 @@ var app  = new Framework7({
   routes: routes,
   // Enable panel left visibility breakpoint
   panel: {
+    swipe: true,
     leftBreakpoint: 960,
   },
 });
@@ -50,4 +51,22 @@ $$('#my-login-screen .login-button').on('click', function () {
 
   // Alert username and password
   app.dialog.alert('Username: ' + username + '<br>Password: ' + password);
+});
+
+var myPhotoBrowserPopupDark = app.photoBrowser.create({
+  photos : [
+      {
+          html: '<iframe src="//www.youtube.com/embed/lmc21V-zBq0" frameborder="0" allowfullscreen></iframe>',
+          caption: 'Woodkid - Run Boy Run (Official HD Video)'
+      },
+      {
+        html: '<iframe src="//www.youtube.com/embed/lmc21V-zBq0" frameborder="0" allowfullscreen></iframe>',
+          caption: 'Second Caption Text'
+      },
+      {
+        html: '<iframe src="//www.youtube.com/embed/lmc21V-zBq0" frameborder="0" allowfullscreen></iframe>',
+      },
+  ],
+  theme: 'dark',
+  type: 'standalone'
 });

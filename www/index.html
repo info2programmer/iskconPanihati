@@ -35,18 +35,27 @@
         <div class="page">
           <div class="navbar">
             <div class="navbar-inner sliding">
-              <div class="title">Left Panel</div>
+              <div class="title text-color-orange">HAREKRISHNA</div>
             </div>
           </div>
           <div class="page-content">
-            <div class="block-title">Left View Navigation</div>
+            
             <div class="list links-list">
               <ul>
-                <li><a href="/left-page-1/">Left Page 1</a></li>
-                <li><a href="/left-page-2/">Left Page 2</a></li>
+                <li><a href="/" data-view=".view-main" class="panel-close">Home</a></li>
+                <li><a href="/about/" data-view=".view-main" class="panel-close">About Us</a></li>
+                <li><a href="/templeFacility/" data-view=".view-main" class="panel-close">Temple Facility</a></li>
+                <li><a href="/prabhuPada/" data-view=".view-main" class="panel-close">Prabhupada</a></li>
+                <li><a href="/left-page-2/" data-view=".view-main" class="panel-close">Notification<span class="badge color-gray">5</span></a></li>
+                <li><a href="/left-page-2/" data-view=".view-main" class="panel-close">Contact </a></li>
+                <li><a href="/privacyPolicy/" data-view=".view-main" class="panel-close">Privacy Policy</a></li>
+                <li><a href="/termsAndCondition/" data-view=".view-main" class="panel-close">Terms and Condition</a></li>
+                <li><a href="/language/" data-view=".view-main" class="panel-close">Language</a></li>
+                <li><a href="/left-page-2/" data-view=".view-main" class="panel-close">Logout</a></li>
+                <li><a class="login-screen-open"  data-login-screen=".login-screen">Login</a></li>
               </ul>
             </div>
-            <div class="block-title">Control Main View</div>
+            <!-- <div class="block-title">Control Main View</div>
             <div class="list links-list">
               <ul>
                 <li>
@@ -59,7 +68,7 @@
                   <a href="#" data-view=".view-main" class="back">Back in history</a>
                 </li>
               </ul>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -81,6 +90,11 @@
               </a>
             </div>
             <div class="title sliding text-color-white">Home</div>
+            <div class="right">
+              <a href="#" class="link icon-only">
+                <i class="icon f7-icons color-white">bell_fill<span class="badge color-blue">5</span></i>
+              </a>
+            </div>
           </div>
         </div>
        
@@ -129,6 +143,10 @@
               </div>
           </div>
           
+          <div class="block row">
+            <button class="col button button-raised button-fill button-round" onclick="myPhotoBrowserPopupDark.open();"> View Videos</button>
+            <button class="col button button-raised button-fill button-round" onclick="myPhotoBrowserPopupDark.open();"> View Photos</button>
+          </div>
 
          
         </div>
@@ -161,14 +179,14 @@
       <div class="view">
         <div class="page">
           <div class="page-content login-screen-content">
-            <div class="login-screen-title">Login</div>
+            <img src="img/loginbg.png" style="width:100%">
             <div class="list">
               <ul>
                 <li class="item-content item-input">
                   <div class="item-inner">
-                    <div class="item-title item-label">Username</div>
+                    <div class="item-title item-label">Email</div>
                     <div class="item-input-wrap">
-                      <input type="text" name="username" placeholder="Your username">
+                      <input type="text" name="username" placeholder="Your Email">
                     </div>
                   </div>
                 </li>
@@ -182,18 +200,65 @@
                 </li>
               </ul>
             </div>
-            <div class="list">
-              <ul>
-                <li>
-                  <a href="#" class="item-link list-button login-button">Sign In</a>
-                </li>
-              </ul>
-              <div class="block-footer">Some text about login information.<br>Click "Sign In" to close Login Screen</div>
+            <div class="col block ">
+              <button class="button  login-button button-large button-outline">Sign In</button>
+              <p class="text-align-center">Not Registered? <a class="link"><strong>Create Account</strong></a></p>
+              <p class="text-align-center">Forgot Password? <a class="link"><strong>Get Password</strong></a></p>
+              <p class="text-align-center"><a class="link"><strong>Skip Login</strong></a></p>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="register-screen" id="my-register-screen">
+        <div class="view">
+          <div class="page">
+            <div class="page-content login-screen-content">
+              <img src="img/loginbg.png" style="width:100%">
+              <div class="list">
+                <ul>
+                  <li class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-label">Email</div>
+                      <div class="item-input-wrap">
+                        <input type="text" name="username" placeholder="Your Email">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-label">Password</div>
+                      <div class="item-input-wrap">
+                        <input type="password" name="password" placeholder="Your password">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content item-input">
+                      <div class="item-inner">
+                        <div class="item-title item-label">Name</div>
+                        <div class="item-input-wrap">
+                          <input type="text" name="fullname" placeholder="Your Full Name">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input">
+                        <div class="item-inner">
+                          <div class="item-title item-label">Phone</div>
+                          <div class="item-input-wrap">
+                            <input type="number" name="phone" placeholder="Your Phone Number">
+                          </div>
+                        </div>
+                      </li>
+                </ul>
+              </div>
+              <div class="col block ">
+                <button class="button  login-button button-large button-outline">Sign Up</button>
+                <p class="text-align-center"><a class="link"><strong>Skip Register</strong></a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
   <!-- Cordova -->
   <!--

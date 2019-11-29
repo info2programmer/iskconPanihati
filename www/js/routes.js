@@ -5,8 +5,251 @@ routes = [
   },
   {
     path: '/about/',
-    url: './pages/about.html',
+    async: function (routeTo, routeFrom, resolve, reject) {
+      app.preloader.show();
+      let language = localStorage.getItem("localLanguage");
+      let pageName = ''
+      let pageContent = ''
+      app.request.get('https://iskconpanihatiapp.in/api/content_page/1', {}, function (data) {
+       
+        if(language == "en"){
+          pageName = data.result.page_title_english
+          pageContent = data.result.page_content_english
+        }
+        else if(language == "bn"){
+          pageName = data.result.page_title_bengali
+          pageContent = data.result.page_content_bengali
+        }
+        else{
+          pageName = data.result.page_title_hindi
+          pageContent = data.result.page_content_hindi
+        }
+
+        setTimeout(function () {
+          app.preloader.hide();
+          resolve(
+            {
+              componentUrl: './pages/about.html',
+            },
+            {
+              context: {
+                pageName: pageName,
+                pageContent : pageContent
+              }
+            }
+          );
+        }, 1000);
+      },function(){},"json");
+     
+    },
   },
+
+  {
+    path: '/templeFacility/',
+    async: function (routeTo, routeFrom, resolve, reject) {
+      app.preloader.show();
+      let language = localStorage.getItem("localLanguage");
+      let pageName = ''
+      let pageContent = ''
+      app.request.get('https://iskconpanihatiapp.in/api/content_page/4', {}, function (data) {
+       
+        if(language == "en"){
+          pageName = data.result.page_title_english
+          pageContent = data.result.page_content_english
+        }
+        else if(language == "bn"){
+          pageName = data.result.page_title_bengali
+          pageContent = data.result.page_content_bengali
+        }
+        else{
+          pageName = data.result.page_title_hindi
+          pageContent = data.result.page_content_hindi
+        }
+
+        setTimeout(function () {
+          app.preloader.hide();
+          resolve(
+            {
+              componentUrl: './pages/templeFacility.html',
+            },
+            {
+              context: {
+                pageName: pageName,
+                pageContent : pageContent
+              }
+            }
+          );
+        }, 1000);
+      },function(){},"json");
+     
+    },
+  },
+
+  {
+    path: '/prabhuPada/',
+    async: function (routeTo, routeFrom, resolve, reject) {
+      app.preloader.show();
+      let language = localStorage.getItem("localLanguage");
+      let pageName = ''
+      let pageContent = ''
+      app.request.get('https://iskconpanihatiapp.in/api/content_page/5', {}, function (data) {
+       
+        if(language == "en"){
+          pageName = data.result.page_title_english
+          pageContent = data.result.page_content_english
+        }
+        else if(language == "bn"){
+          pageName = data.result.page_title_bengali
+          pageContent = data.result.page_content_bengali
+        }
+        else{
+          pageName = data.result.page_title_hindi
+          pageContent = data.result.page_content_hindi
+        }
+
+        setTimeout(function () {
+          app.preloader.hide();
+          resolve(
+            {
+              componentUrl: './pages/prabhuPada.html',
+            },
+            {
+              context: {
+                pageName: pageName,
+                pageContent : pageContent
+              }
+            }
+          );
+        }, 1000);
+      },function(){},"json");
+     
+    },
+  },
+
+  {
+    path: '/prabhuPada/',
+    async: function (routeTo, routeFrom, resolve, reject) {
+      app.preloader.show();
+      let language = localStorage.getItem("localLanguage");
+      let pageName = ''
+      let pageContent = ''
+      app.request.get('https://iskconpanihatiapp.in/api/content_page/5', {}, function (data) {
+       
+        if(language == "en"){
+          pageName = data.result.page_title_english
+          pageContent = data.result.page_content_english
+        }
+        else if(language == "bn"){
+          pageName = data.result.page_title_bengali
+          pageContent = data.result.page_content_bengali
+        }
+        else{
+          pageName = data.result.page_title_hindi
+          pageContent = data.result.page_content_hindi
+        }
+
+        setTimeout(function () {
+          app.preloader.hide();
+          resolve(
+            {
+              componentUrl: './pages/prabhuPada.html',
+            },
+            {
+              context: {
+                pageName: pageName,
+                pageContent : pageContent
+              }
+            }
+          );
+        }, 1000);
+      },function(){},"json");
+     
+    },
+  },
+
+  {
+    path: '/privacyPolicy/',
+    async: function (routeTo, routeFrom, resolve, reject) {
+      app.preloader.show();
+      let language = localStorage.getItem("localLanguage");
+      let pageName = ''
+      let pageContent = ''
+      app.request.get('https://iskconpanihatiapp.in/api/content_page/2', {}, function (data) {
+       
+        if(language == "en"){
+          pageName = data.result.page_title_english
+          pageContent = data.result.page_content_english
+        }
+        else if(language == "bn"){
+          pageName = data.result.page_title_bengali
+          pageContent = data.result.page_content_bengali
+        }
+        else{
+          pageName = data.result.page_title_hindi
+          pageContent = data.result.page_content_hindi
+        }
+
+        setTimeout(function () {
+          app.preloader.hide();
+          resolve(
+            {
+              componentUrl: './pages/privacyPolicy.html',
+            },
+            {
+              context: {
+                pageName: pageName,
+                pageContent : pageContent
+              }
+            }
+          );
+        }, 1000);
+      },function(){},"json");
+     
+    },
+  },
+
+  {
+    path: '/termsAndCondition/',
+    async: function (routeTo, routeFrom, resolve, reject) {
+      app.preloader.show();
+      let language = localStorage.getItem("localLanguage");
+      let pageName = ''
+      let pageContent = ''
+      app.request.get('https://iskconpanihatiapp.in/api/content_page/3', {}, function (data) {
+       
+        if(language == "en"){
+          pageName = data.result.page_title_english
+          pageContent = data.result.page_content_english
+        }
+        else if(language == "bn"){
+          pageName = data.result.page_title_bengali
+          pageContent = data.result.page_content_bengali
+        }
+        else{
+          pageName = data.result.page_title_hindi
+          pageContent = data.result.page_content_hindi
+        }
+
+        setTimeout(function () {
+          app.preloader.hide();
+          resolve(
+            {
+              componentUrl: './pages/termsAndCondition.html',
+            },
+            {
+              context: {
+                pageName: pageName,
+                pageContent : pageContent
+              }
+            }
+          );
+        }, 1000);
+      },function(){},"json");
+     
+    },
+  },
+
+
   {
     path: '/form/',
     url: './pages/form.html',
