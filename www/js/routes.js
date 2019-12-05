@@ -303,6 +303,47 @@ routes = [
   },
 
   {
+    path: "/language/",
+    async: function(routeTo, routeFrom, resolve, reject) {
+      app.preloader.show();
+      let language = localStorage.getItem("localLanguage");
+      let pageName = "";
+      let pageContent = "";
+      app.request.get(
+        "https://iskconpanihatiapp.in/api/contact/",
+        {},
+        function(data) {
+          pageContent = data.result;
+          if (language == "hin") {
+            pageName = `भाषा`;
+          } else if (language == "bn") {
+            pageName = `ভাষা`;
+          } else {
+            pageName = `Language`;
+          }
+
+          setTimeout(function() {
+            app.preloader.hide();
+            resolve(
+              {
+                componentUrl: "./pages/language.html"
+              },
+              {
+                context: {
+                  pageName: pageName,
+                  pageContent: language
+                }
+              }
+            );
+          }, 1000);
+        },
+        function() {},
+        "json"
+      );
+    }
+  },
+
+  {
     path: "/form/",
     url: "./pages/form.html"
   },

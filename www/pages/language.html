@@ -1,0 +1,53 @@
+<template>
+  <div class="page" data-name="about">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="ios-only">Back</span>
+          </a>
+        </div>
+        <div class="title">{{pageName}}</div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="block list">
+        <ul>
+          <li>
+            <a
+              class="item-link smart-select smart-select-init"
+              data-open-in="sheet"
+            >
+              <select name="mac-windows" @change="languageChange">
+                <option value="" selected hidden>Select Language</option>
+                <option value="hin">Hindi</option>
+                <option value="bn">Bengali</option>
+                <option value="en">English</option>
+              </select>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Mac or Windows</div>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  return {
+    methods: {
+      languageChange: function(e) {
+        // console.log(e.target.value);
+        if (e.target.value == "") {
+          localStorage.setItem("localLanguage", "en");
+        } else {
+          localStorage.setItem("localLanguage", e.target.value);
+        }
+      }
+    }
+  };
+</script>
