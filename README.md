@@ -1,50 +1,23 @@
-# ⛔️ DEPRECATED
 
-<em>**This repo is deprecated and not mainted any more. Use [Framework7-CLI](https://framework7.io/cli/) instead. Please, don't open new issues and don't send any PRs to this repository**</em>
 
-# Framework7 Split View Starter App Template
 
-Split view Framework7 starter app template.
+## API
 
-## Usage
+[6:41 PM, 12/4/2019] Subham: Login API : http://iskconpanihatiapp.in/api/banner?email=john@gmail.com&password=12345&login_type=normal
+[6:41 PM, 12/4/2019] Subham: API
+1. Banner: https://iskconpanihatiapp.in/api/banner_image
+2. Daily Schedule: https://iskconpanihatiapp.in/api/daily_schedule
+3. Video: https://iskconpanihatiapp.in/api/video
+4. Audio: https://iskconpanihatiapp.in/api/audio
+5. Yearly Event Calender: https://iskconpanihatiapp.in/api/calender
+6. Album and Gallery: http://iskconpanihatiapp.in/api/gallery
+[6:42 PM, 12/4/2019] Subham: Registration API : https://iskconpanihatiapp.in/api/member_add?email=john2@gmail.com&password=12345&name=John%20Smith&phone=7894561230&address=kolkata&gender=male&dob=2009-12-29
+[6:42 PM, 12/4/2019] Subham: Content Pages API
+1. About Us : http://iskconpanihatiapp.in/api/content_page/1
+2. temple facility : http://iskconpanihatiapp.in/api/content_page/4
+3. Prabhupada : http://iskconpanihatiapp.in/api/content_page/5
+4. privacy policy : http://iskconpanihatiapp.in/api/content_page/2
+5. terms and conditions : http://iskconpanihatiapp.in/api/content_page/3
+[6:42 PM, 12/4/2019] Subham: Contact page API : GET/ http://iskconpanihatiapp.in/api/contact
+[6:42 PM, 12/4/2019] Subham: Contact Form E-mail send API : GET/ http://iskconpanihatiapp.in/api/mailSend?name=John%20Smith&subject=test&content=Lorem%20Ipsum&email=john@gmail.com&phone=7896541230
 
-### 1. Download this repository
-```
-git clone https://github.com/framework7io/framework7-template-split-view my-app
-```
-
-Repository will be downloaded into `my-app/` folder
-
-### 2. Instal dependencies
-
-Go to the downloaded repository folder and run:
-```
-npm install
-```
-
-This will download latest version of Framework7 (to `/www/framework7/`) and required icon fonts (to `/www/fonts/`)
-
-### 3. Run the app
-
-```
-npm run serve
-```
-
-App will be opened in browser at `http://localhost:8080/`
-
-## Use with cordova
-
-Just put the contents of `www` folder in your cordova's project root `www` folder
-
-## One command install
-
-```
-git clone https://github.com/framework7io/framework7-template-split-view my-app &&
-cd my-app &&
-npm install &&
-npm run serve
-```
-
-## Live Preview
-
-https://framework7io.github.io/framework7-template-split-view/
