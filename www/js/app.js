@@ -68,7 +68,7 @@ var myPhotoBrowserPopupDark = app.photoBrowser.create({
     },
     {
       html:
-        '<iframe src="//www.youtube.com/embed/lmc21V-zBq0" frameborder="0" allowfullscreen></iframe>',
+        '<iframe src="//www.youtube.com/embed/C396EinEs3Y" frameborder="0" allowfullscreen></iframe>',
       caption: "Second Caption Text"
     },
     {
