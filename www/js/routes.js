@@ -343,6 +343,48 @@ routes = [
     }
   },
 
+  // Temple Schedule
+  {
+    path: "/templeSchedule/",
+    async: function(routeTo, routeFrom, resolve, reject) {
+      app.preloader.show();
+      let language = localStorage.getItem("localLanguage");
+      let pageName = "";
+      let pageContent = "";
+      app.request.get(
+        "https://iskconpanihatiapp.in/api/contact/",
+        {},
+        function(data) {
+          pageContent = data.result;
+          if (language == "hin") {
+            pageName = `संपर्क करें`;
+          } else if (language == "bn") {
+            pageName = `যোগাযোগ`;
+          } else {
+            pageName = `Contact`;
+          }
+
+          setTimeout(function() {
+            app.preloader.hide();
+            resolve(
+              {
+                componentUrl: "./pages/templeSchedule.html"
+              },
+              {
+                context: {
+                  pageName: pageName,
+                  pageContent: pageContent
+                }
+              }
+            );
+          }, 1000);
+        },
+        function() {},
+        "json"
+      );
+    }
+  },
+
   {
     path: "/form/",
     url: "./pages/form.html"
