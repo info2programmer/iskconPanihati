@@ -63,7 +63,7 @@ var myPhotoBrowserPopupDark = app.photoBrowser.create({
   photos: [
     {
       html:
-        '<iframe src="https://www.youtube.com/embed/YoGRcDB-fn4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        '<iframe src="https://www.youtube.com/embed/YoGRcDB-fn4" frameborder="0" allowfullscreen></iframe>',
       caption: "Woodkid - Run Boy Run (Official HD Video)"
     },
     {
