@@ -36,6 +36,8 @@ var phonegapApp = {
         $("#lblTodayEvent").html(`Today Event`);
         $("#lblVaisavCalender").html(`Vaisav Calender`);
         $("#lblNityaSeba").html(`Nitya Seba`);
+        $("#btnVideo").html(`Videos`);
+        $("#btnPhotos").html(`Photos`);
         break;
 
       case "bn":
@@ -46,6 +48,8 @@ var phonegapApp = {
         $("#lblTodayEvent").html(`আজ ইভেন্ট`);
         $("#lblVaisavCalender").html(`বৈষ্ণৱ ক্যালেন্ডার`);
         $("#lblNityaSeba").html(`নিত্য সেবা`);
+        $("#btnVideo").html(`ভিডিও`);
+        $("#btnPhotos").html(`ফটো`);
         break;
 
       case "hin":
@@ -56,6 +60,8 @@ var phonegapApp = {
         $("#lblTodayEvent").html(`आज घटना`);
         $("#lblVaisavCalender").html(`वैष्णव कैलेंडर`);
         $("#lblNityaSeba").html(`नित्य सेबा`);
+        $("#btnVideo").html(`वीडियो`);
+        $("#btnPhotos").html(`फोटो`);
         break;
       default:
         break;

@@ -31,6 +31,12 @@ var app = new Framework7({
   }
 });
 
+var swiper = app.swiper.create(".swiper-container", {
+  speed: 400,
+  spaceBetween: 100,
+  autoplay: true
+});
+
 // Init/Create left panel view
 var leftView = app.views.create(".view-left", {
   url: "/"
