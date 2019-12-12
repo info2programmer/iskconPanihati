@@ -66,5 +66,24 @@ var phonegapApp = {
       default:
         break;
     }
+
+    phonegapApp.loadBanner();
+  },
+
+  // This function for load banner
+  loadBanner: function() {
+    $.ajax({
+      type: "get",
+      url: "https://iskconpanihatiapp.in/api/banner_image",
+      data: {},
+      dataType: "json",
+      success: function(response) {
+        banners = "";
+        for (list in response.result) {
+          banners += `<div class="swiper-slide"><img src="${response.result[list].image}" width="100%"/></div>`;
+        }
+        $("#bannerImages").html(banners);
+      }
+    });
   }
 };
