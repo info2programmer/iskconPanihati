@@ -30,12 +30,19 @@ var app = new Framework7({
     leftBreakpoint: 960
   }
 });
-
-var swiper = app.swiper.create(".swiper-container", {
-  speed: 400,
-  spaceBetween: 100,
-  autoplay: true
-});
+phonegapApp.loadBanner();
+setTimeout(function() {
+  var swiper = app.swiper.create(".swiper-container", {
+    speed: 400,
+    spaceBetween: 100,
+    autoplay: true
+  });
+}, 2000);
+// var swiper = app.swiper.create(".swiper-container", {
+//   speed: 400,
+//   spaceBetween: 100,
+//   autoplay: true
+// });
 
 // Init/Create left panel view
 var leftView = app.views.create(".view-left", {

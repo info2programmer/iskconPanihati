@@ -67,7 +67,7 @@ var phonegapApp = {
         break;
     }
 
-    phonegapApp.loadBanner();
+    //phonegapApp.loadBanner();
   },
 
   // This function for load banner
