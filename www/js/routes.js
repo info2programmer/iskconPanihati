@@ -465,6 +465,125 @@ routes = [
     }
   },
 
+  // Vaisav Calender
+  {
+    path: "/vaisavCalender/",
+    async: function(routeTo, routeFrom, resolve, reject) {
+      app.preloader.show();
+      let language = localStorage.getItem("localLanguage");
+      let pageName = "";
+      let pageContent = "";
+      app.request.get(
+        "https://iskconpanihatiapp.in/api/calender",
+        {},
+        function(data) {
+          pageContent = "";
+          if (language == "hin") {
+            pageName = `वैष्णव कैलेंडर`;
+          } else if (language == "bn") {
+            pageName = `বৈষ্ণৱ ক্যালেন্ডার`;
+          } else {
+            pageName = `Vaisav Calender`;
+          }
+
+          for (list in data.result) {
+            if (language == "hin") {
+              pageContent += `<div class="card card-expandable">
+            <div class="card-content">
+              <div class="bg-color-red" style="height: 300px">
+                <div class="card-header text-color-white display-block">
+                  ${data.result[list].title_hindi}
+                  <br />
+                  <small style="opacity: 0.7">${data.result[list].event_date}</small>
+                </div>
+                <a
+                  href="#"
+                  class="link card-close card-opened-fade-in color-white"
+                  style="position: absolute; right: 15px; top: 15px"
+                >
+                  <i class="material-icons">close</i>
+                </a>
+              </div>
+              <div class="card-content-padding">
+              <p>
+              ${data.result[list].description_hindi}
+            </p>
+              </div>
+            </div>
+          </div>`;
+            } else if (language == "bn") {
+              pageContent += `<div class="card card-expandable">
+              <div class="card-content">
+                <div class="bg-color-red" style="height: 300px">
+                  <div class="card-header text-color-white display-block">
+                  ${data.result[list].title_bengali}
+                  <br>
+                  <small style="opacity: 0.7">${data.result[list].event_date_bangla}</small>
+                  </div>
+                  <a
+                    href="#"
+                    class="link card-close card-opened-fade-in color-white"
+                    style="position: absolute; right: 15px; top: 15px"
+                  >
+                    <i class="material-icons">close</i>
+                  </a>
+                </div>
+                <div class="card-content-padding">
+                <p>
+                  ${data.result[list].description_bengali}
+                </p>
+                </div>
+              </div>
+            </div>`;
+            } else {
+              pageContent += `<div class="card card-expandable">
+            <div class="card-content">
+              <div class="bg-color-red" style="height: 300px">
+                <div class="card-header text-color-white display-block">
+                ${data.result[list].title_english}
+                <br>
+                <small style="opacity: 0.7">${data.result[list].event_date}</small>
+                </div>
+                <a
+                  href="#"
+                  class="link card-close card-opened-fade-in color-white"
+                  style="position: absolute; right: 15px; top: 15px"
+                >
+                  <i class="material-icons">close</i>
+                </a>
+              </div>
+              <div class="card-content-padding">
+              <p>
+                ${data.result[list].description_english}
+              </p>
+
+              </div>
+            </div>
+          </div>`;
+            }
+          }
+
+          setTimeout(function() {
+            app.preloader.hide();
+            resolve(
+              {
+                componentUrl: "./pages/vaishnavCalender.html"
+              },
+              {
+                context: {
+                  pageName: pageName,
+                  pageContent: pageContent
+                }
+              }
+            );
+          }, 1000);
+        },
+        function() {},
+        "json"
+      );
+    }
+  },
+
   {
     path: "/form/",
     url: "./pages/form.html"
