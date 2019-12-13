@@ -86,4 +86,98 @@ var phonegapApp = {
       }
     });
   }
+
+  // This Function For Get Temple Schedule
+  // templeSchedule: function(result) {
+  //   let language = localStorage.getItem("localLanguage");
+  //   timeing = ''
+  //   for (list in result) {
+  //     if (language == "hin") {
+  //       timeing += `<div class="card card-expandable">
+  //     <div class="card-content">
+  //       <div class="bg-color-red" style="height: 300px">
+  //         <div class="card-header text-color-white display-block">
+  //           Framework7
+  //           <br />
+  //           <small style="opacity: 0.7">Build Mobile Apps</small>
+  //         </div>
+  //         <a
+  //           href="#"
+  //           class="link card-close card-opened-fade-in color-white"
+  //           style="position: absolute; right: 15px; top: 15px"
+  //         >
+  //           <i class="icon f7-icons">multiply_circle_fill</i>
+  //         </a>
+  //       </div>
+  //       <div class="card-content-padding">
+  //         <p>
+  //           Framework7 - is a free and open source HTML mobile framework to
+  //           develop hybrid mobile apps or web apps with iOS or Android
+  //           (Material) native look and feel. It is also an indispensable
+  //           prototyping apps tool to show working app prototype as soon as
+  //           possible in case you need to.
+  //         </p>
+  //       </div>
+  //     </div>
+  //   </div>`
+  //     } else if (language == "bn") {
+  //       timeing += `<div class="card card-expandable">
+  //       <div class="card-content">
+  //         <div class="bg-color-red" style="height: 300px">
+  //           <div class="card-header text-color-white display-block">
+  //             Framework7
+  //             <br />
+  //             <small style="opacity: 0.7">Build Mobile Apps</small>
+  //           </div>
+  //           <a
+  //             href="#"
+  //             class="link card-close card-opened-fade-in color-white"
+  //             style="position: absolute; right: 15px; top: 15px"
+  //           >
+  //             <i class="icon f7-icons">multiply_circle_fill</i>
+  //           </a>
+  //         </div>
+  //         <div class="card-content-padding">
+  //           <p>
+  //             Framework7 - is a free and open source HTML mobile framework to
+  //             develop hybrid mobile apps or web apps with iOS or Android
+  //             (Material) native look and feel. It is also an indispensable
+  //             prototyping apps tool to show working app prototype as soon as
+  //             possible in case you need to.
+  //           </p>
+  //         </div>
+  //       </div>
+  //     </div>`
+  //     } else {
+  //       timeing += `<div class="card card-expandable">
+  //     <div class="card-content">
+  //       <div class="bg-color-red" style="height: 300px">
+  //         <div class="card-header text-color-white display-block">
+  //           Framework7
+  //           <br />
+  //           <small style="opacity: 0.7">Build Mobile Apps</small>
+  //         </div>
+  //         <a
+  //           href="#"
+  //           class="link card-close card-opened-fade-in color-white"
+  //           style="position: absolute; right: 15px; top: 15px"
+  //         >
+  //           <i class="icon f7-icons">multiply_circle_fill</i>
+  //         </a>
+  //       </div>
+  //       <div class="card-content-padding">
+  //         <p>
+  //           Framework7 - is a free and open source HTML mobile framework to
+  //           develop hybrid mobile apps or web apps with iOS or Android
+  //           (Material) native look and feel. It is also an indispensable
+  //           prototyping apps tool to show working app prototype as soon as
+  //           possible in case you need to.
+  //         </p>
+  //       </div>
+  //     </div>
+  //   </div>`
+  //     }
+
+  //   }
+  // }
 };

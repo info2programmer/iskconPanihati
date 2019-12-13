@@ -352,16 +352,96 @@ routes = [
       let pageName = "";
       let pageContent = "";
       app.request.get(
-        "https://iskconpanihatiapp.in/api/contact/",
+        "https://iskconpanihatiapp.in/api/daily_schedule",
         {},
         function(data) {
-          pageContent = data.result;
+          pageContent = "";
           if (language == "hin") {
-            pageName = `संपर्क करें`;
+            pageName = `आरती और दर्शन का समय`;
           } else if (language == "bn") {
-            pageName = `যোগাযোগ`;
+            pageName = `আরতি ও দর্শনের সময়`;
           } else {
-            pageName = `Contact`;
+            pageName = `ARATI & DARSHAN TIMING`;
+          }
+
+          for (list in data.result) {
+            if (language == "hin") {
+              pageContent += `<div class="card card-expandable">
+            <div class="card-content">
+              <div class="bg-color-red" style="height: 300px">
+                <div class="card-header text-color-white display-block">
+                  ${data.result[list].title_hindi}
+                  <br />
+                </div>
+                <a
+                  href="#"
+                  class="link card-close card-opened-fade-in color-white"
+                  style="position: absolute; right: 15px; top: 15px"
+                >
+                  <i class="material-icons">close</i>
+                </a>
+              </div>
+              <div class="card-content-padding">
+                <p>
+                  Start Time : ${data.result[list].start_time}
+                </p>
+                <p>
+                  End Time : ${data.result[list].end_time}
+                </p>
+              </div>
+            </div>
+          </div>`;
+            } else if (language == "bn") {
+              pageContent += `<div class="card card-expandable">
+              <div class="card-content">
+                <div class="bg-color-red" style="height: 300px">
+                  <div class="card-header text-color-white display-block">
+                  ${data.result[list].title_bengali}
+                  </div>
+                  <a
+                    href="#"
+                    class="link card-close card-opened-fade-in color-white"
+                    style="position: absolute; right: 15px; top: 15px"
+                  >
+                    <i class="material-icons">close</i>
+                  </a>
+                </div>
+                <div class="card-content-padding">
+                <p>
+                Start Time : ${data.result[list].start_time}
+              </p>
+              <p>
+                End Time : ${data.result[list].end_time}
+              </p>
+                </div>
+              </div>
+            </div>`;
+            } else {
+              pageContent += `<div class="card card-expandable">
+            <div class="card-content">
+              <div class="bg-color-red" style="height: 300px">
+                <div class="card-header text-color-white display-block">
+                ${data.result[list].title_english}
+                </div>
+                <a
+                  href="#"
+                  class="link card-close card-opened-fade-in color-white"
+                  style="position: absolute; right: 15px; top: 15px"
+                >
+                  <i class="material-icons">close</i>
+                </a>
+              </div>
+              <div class="card-content-padding">
+              <p>
+              Start Time : ${data.result[list].start_time}
+            </p>
+            <p>
+              End Time : ${data.result[list].end_time}
+            </p>
+              </div>
+            </div>
+          </div>`;
+            }
           }
 
           setTimeout(function() {

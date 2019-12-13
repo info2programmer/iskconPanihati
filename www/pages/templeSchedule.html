@@ -12,111 +12,34 @@
       </div>
     </div>
     <div class="page-content">
-      <div class="block">
-        <div class="card">
-          <div class="card-content card-content-padding">
-            <p>
-              <span class="text-color-orange">Address : </span>
-              {{pageContent.address}}
-            </p>
-            <p>
-              <span class="text-color-orange">Phone : </span>
-              {{pageContent.phone}}
-            </p>
-            <p>
-              <span class="text-color-orange">Email : </span>
-              {{pageContent.email}}
-            </p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-content card-content-padding" style="width:100%">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230.05208162472417!2d88.36597370611375!3d22.69724852422469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89c7cf1d2ab19%3A0xce55bc696f57da08!2sISKCON+Panihati!5e0!3m2!1sen!2sin!4v1559764925900!5m2!1sen!2sin"
-              width="90%"
-              height="350"
-              frameborder="0"
-              style="border:0"
-              allowfullscreen=""
-            ></iframe>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-content card-content-padding" style="width:100%">
-            <div class="list inset block">
-              <strong class="block-title">Drop a message</strong>
-              <ul>
-                <li class="item-content item-input">
-                  <div class="item-inner">
-                    <div class="item-title item-floating-label">Name</div>
-                    <div class="item-input-wrap">
-                      <input type="text" name="name" />
-                      <span class="input-clear-button"></span>
-                    </div>
-                  </div>
-                </li>
-                <li class="item-content item-input">
-                  <div class="item-inner">
-                    <div class="item-title item-floating-label">Email</div>
-                    <div class="item-input-wrap">
-                      <input type="text" name="name" />
-                      <span class="input-clear-button"></span>
-                    </div>
-                  </div>
-                </li>
-                <li class="item-content item-input">
-                  <div class="item-inner">
-                    <div class="item-title item-floating-label">Subject</div>
-                    <div class="item-input-wrap">
-                      <input type="text" name="name" />
-                      <span class="input-clear-button"></span>
-                    </div>
-                  </div>
-                </li>
-                <li class="item-content item-input">
-                  <div class="item-inner">
-                    <div class="item-title item-floating-label">Message</div>
-                    <div class="item-input-wrap">
-                      <textarea class="resizable"></textarea>
-                      <span class="input-clear-button"></span>
-                    </div>
-                  </div>
-                </li>
-                <li class="item-content">
-                  <div class="item-inner">
-                    <div class="item-input-wrap">
-                      <button
-                        class="button button-outline button-round"
-                        style="width: 90%;"
-                      >
-                        Send
-                      </button>
-                    </div>
-                  </div>
-                </li>
-              </ul>
+      <!-- <div class="card card-expandable">
+        <div class="card-content">
+          <div class="bg-color-red" style="height: 300px">
+            <div class="card-header text-color-white display-block">
+              Framework7
+              <br />
+              <small style="opacity: 0.7">Build Mobile Apps</small>
             </div>
+            <a
+              href="#"
+              class="link card-close card-opened-fade-in color-white"
+              style="position: absolute; right: 15px; top: 15px"
+            >
+              <i class="icon f7-icons">multiply_circle_fill</i>
+            </a>
+          </div>
+          <div class="card-content-padding">
+            <p>
+              Framework7 - is a free and open source HTML mobile framework to
+              develop hybrid mobile apps or web apps with iOS or Android
+              (Material) native look and feel. It is also an indispensable
+              prototyping apps tool to show working app prototype as soon as
+              possible in case you need to.
+            </p>
           </div>
         </div>
-        <div class="block text-align-center">
-          <a class="link external" href="{{pageContent.facebook}}"
-            ><span class="icon f7-icons text-color-blue">logo_facebook</span></a
-          >&nbsp;&nbsp;<a class="link external" href="{{pageContent.instagram}}"
-            ><span class="icon f7-icons text-color-pink"
-              >logo_instagram</span
-            ></a
-          >&nbsp;&nbsp;<a class="link external" href="{{pageContent.youtube}}"
-            ><span class="icon f7-icons text-color-red"
-              >play_rectangle_fill</span
-            ></a
-          >&nbsp;&nbsp;<a class="link external" href="{{pageContent.twitter}}"
-            ><span class="icon f7-icons text-color-lightblue"
-              >logo_twitter</span
-            ></a
-          >
-        </div>
-      </div>
+      </div>         -->
+      {{pageContent}}
     </div>
   </div>
 </template>

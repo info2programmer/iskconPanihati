@@ -28,6 +28,11 @@ var app = new Framework7({
   panel: {
     swipe: true,
     leftBreakpoint: 960
+  },
+
+  card: {
+    hideNavbarOnOpen: true,
+    closeByBackdropClick: true
   }
 });
 phonegapApp.loadBanner();
