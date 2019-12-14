@@ -72,11 +72,7 @@ var phonegapApp = {
 
     if (userLogin != "") {
       app.loginScreen.open("#my-login-screen");
-      $("#linkLogout").show();
-      $("#linkLogin").hide();
     } else {
-      $("#linkLogout").hide();
-      $("#linkLogin").show();
     }
 
     //phonegapApp.loadBanner();
@@ -104,26 +100,26 @@ var phonegapApp = {
   closeLoginModal: function() {
     app.loginScreen.close("#my-login-screen");
     let userLogin = localStorage.getItem("isIsckonPanihatiLogin");
-    if (userLogin != "") {
-      $("#linkLogout").hide();
-      $("#linkLogin").hide();
-    } else {
-      $("#linkLogout").hide();
-      $("#linkLogin").show();
-    }
+    // if (userLogin != "") {
+    //   $("#linkLogout").hide();
+    //   $("#linkLogin").hide();
+    // } else {
+    //   $("#linkLogout").hide();
+    //   $("#linkLogin").show();
+    // }
   },
 
   // This Function For Close Only Register Screen
   closeReginsetrScreen: function() {
     app.loginScreen.close("#my-register-screen");
     let userLogin = localStorage.getItem("isIsckonPanihatiLogin");
-    if (userLogin != "") {
-      $("#linkLogout").show();
-      $("#linkLogin").hide();
-    } else {
-      $("#linkLogout").hide();
-      $("#linkLogin").show();
-    }
+    // if (userLogin != "") {
+    //   $("#linkLogout").show();
+    //   $("#linkLogin").hide();
+    // } else {
+    //   $("#linkLogout").hide();
+    //   $("#linkLogin").show();
+    // }
   },
 
   // This Function For Close LOginScreen And Open Register Screen
@@ -131,13 +127,13 @@ var phonegapApp = {
     let userLogin = localStorage.getItem("isIsckonPanihatiLogin");
     app.loginScreen.close("#my-login-screen");
     app.loginScreen.open("#my-register-screen");
-    if (userLogin != "") {
-      $("#linkLogout").show();
-      $("#linkLogin").hide();
-    } else {
-      $("#linkLogout").hide();
-      $("#linkLogin").show();
-    }
+    // if (userLogin != "") {
+    //   $("#linkLogout").show();
+    //   $("#linkLogin").hide();
+    // } else {
+    //   $("#linkLogout").hide();
+    //   $("#linkLogin").show();
+    // }
   },
 
   // This Function For Close RegisterScreen And Open Login Screen
@@ -145,13 +141,13 @@ var phonegapApp = {
     let userLogin = localStorage.getItem("isIsckonPanihatiLogin");
     app.loginScreen.close("#my-register-screen");
     app.loginScreen.open("#my-login-screen");
-    if (userLogin != "") {
-      $("#linkLogout").show();
-      $("#linkLogin").hide();
-    } else {
-      $("#linkLogout").hide();
-      $("#linkLogin").show();
-    }
+    // if (userLogin != "") {
+    //   $("#linkLogout").show();
+    //   $("#linkLogin").hide();
+    // } else {
+    //   $("#linkLogout").hide();
+    //   $("#linkLogin").show();
+    // }
   }
 
   // This Function For Get Temple Schedule
