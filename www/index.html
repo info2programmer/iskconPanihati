@@ -51,8 +51,8 @@
                 <li><a href="/privacyPolicy/" data-view=".view-main" class="panel-close">Privacy Policy</a></li>
                 <li><a href="/termsAndCondition/" data-view=".view-main" class="panel-close">Terms and Condition</a></li>
                 <li><a href="/language/" data-view=".view-main" class="panel-close">Language</a></li>
-                <li><a href="/left-page-2/" data-view=".view-main" class="panel-close">Logout</a></li>
-                <li><a class="login-screen-open"  data-login-screen=".login-screen">Login</a></li>
+                <li id="linkLogout" style="display: none;"><a href="/left-page-2/" data-view=".view-main" class="panel-close">Logout</a></li>
+                <li id="linkLogin" style="display: none;"><a class="login-screen-open"  data-login-screen=".login-screen">Login</a></li>
               </ul>
             </div>
             <!-- <div class="block-title">Control Main View</div>
@@ -208,15 +208,15 @@
             </div>
             <div class="col block ">
               <button class="button  login-button button-large button-outline">Sign In</button>
-              <p class="text-align-center">Not Registered? <a class="link"><strong>Create Account</strong></a></p>
+              <p class="text-align-center">Not Registered? <a class="link" onclick="phonegapApp.closeLoginOpenRegister()"><strong>Create Account</strong></a></p>
               <p class="text-align-center">Forgot Password? <a class="link"><strong>Get Password</strong></a></p>
-              <p class="text-align-center"><a class="link"><strong>Skip Login</strong></a></p>
+              <p class="text-align-center"><a class="link" onclick="phonegapApp.closeLoginModal() "><strong>Skip Login</strong></a></p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="register-screen" id="my-register-screen">
+    <div class="login-screen" id="my-register-screen">
         <div class="view">
           <div class="page">
             <div class="page-content login-screen-content">
@@ -259,7 +259,7 @@
               </div>
               <div class="col block ">
                 <button class="button  login-button button-large button-outline">Sign Up</button>
-                <p class="text-align-center"><a class="link"><strong>Skip Register</strong></a></p>
+                <p class="text-align-center"><a class="link" onclick="phonegapApp.closeReginsetrScreen()"><strong>Skip Register</strong></a></p>
               </div>
             </div>
           </div>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "420419980469",
+    "firebase_url": "https://iskconpanihati-17d18.firebaseio.com",
+    "project_id": "iskconpanihati-17d18",
+    "storage_bucket": "iskconpanihati-17d18.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420419980469:android:7fdd259d7dad5bc9",
+        "android_client_info": {
+          "package_name": "iskcon.org.iskonpanihati"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420419980469-rfvh6vauo0nr6p10ghteqgvj1vtaksa4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLHApN1nHQxefmF90IseaEYuo2ca2gmuk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "420419980469-rfvh6vauo0nr6p10ghteqgvj1vtaksa4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
